@@ -1,4 +1,4 @@
-# Advanced Subnet Calculator
+# Subnet Calculator
 
 This Python script is designed to calculate subnet details based on provided IP addresses and CIDR notation. It supports calculating details for a single subnet or multiple subnets, making it a versatile tool for network administrators and enthusiasts.
 
@@ -17,8 +17,8 @@ This script requires Python 3.6 or later. All necessary libraries are part of th
 No installation is necessary. Simply clone or download the repository to your local machine.
 
 ```bash
-git clone https://github.com/yourusername/advanced-subnet-calculator.git
-cd advanced-subnet-calculator
+git clone https://github.com/Bigu93/subnet-calc.git
+cd subnet-calc
 ```
 
 ## Usage
@@ -26,8 +26,8 @@ cd advanced-subnet-calculator
 Run the script from the command line, providing the IP address and optionally the CIDR notation and the number of desired subnets.
 
 ```bash
-python subnet_calculator.py 192.168.1.0 --cidr 24
-python subnet_calculator.py 192.168.1.0 --cidr 24 --subnets 4
+python subnet.py 192.168.1.0 --cidr 24
+python subnet.py 192.168.1.0 --cidr 24 --subnets 4
 ```
 
 ## Input arguments

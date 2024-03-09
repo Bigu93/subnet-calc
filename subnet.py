@@ -6,7 +6,7 @@ def parse_arguments():
     """
     Parses command-line arguments.
     """
-    parser = argparse.ArgumentParser(description="Advanced Subnet Calculator")
+    parser = argparse.ArgumentParser(description="Subnet Calculator")
     parser.add_argument(
         "ip_address", type=str, help="IP address in dotted decimal notation"
     )
@@ -55,13 +55,9 @@ def calculate_subnet_details(ip_address, cidr):
     - Range of Usable IP Addresses
     """
     ip_network = ipaddress.ip_network(f"{ip_address}/{cidr}", strict=False)
-
     subnet_mask = ip_network.netmask
-
     network_address = ip_network.network_address
-
     broadcast_address = ip_network.broadcast_address
-
     usable_ips = list(ip_network.hosts())
 
     results = {
@@ -87,7 +83,6 @@ def calculate_multiple_subnets(ip_address, cidr, subnets):
         new_cidr += 1
 
     ip_network = ipaddress.ip_network(f"{ip_address}/{cidr}", strict=False)
-
     subnet_list = list(ip_network.subnets(new_prefix=new_cidr))
 
     results = []
